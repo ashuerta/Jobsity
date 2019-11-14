@@ -123,6 +123,9 @@ namespace Jobsity.Web
             });
 
             services.AddHttpContextAccessor();
+
+            services.Configure<CloudAMQP>(Configuration.GetSection("amqp"));
+            services.AddSingleton<AmqpService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

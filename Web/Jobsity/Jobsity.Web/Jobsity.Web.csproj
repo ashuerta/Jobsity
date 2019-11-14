@@ -2497,13 +2497,16 @@
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="5.6.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
     <PackageReference Include="Microsoft.Web.LibraryManager.Build" Version="2.0.96" />
+    <PackageReference Include="RabbitMQ.Client" Version="5.1.2" />
     <PackageReference Include="RestSharp" Version="106.6.10" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
   </ItemGroup>
 
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Service\Jobsity\Jobsity.Core.Entity\Jobsity.Core.Entity.csproj" />
+    <Reference Include="Jobsity.Core.Entity">
+      <HintPath>..\..\..\Service\Jobsity\Jobsity.Core.Entity\bin\Debug\netcoreapp3.0\Jobsity.Core.Entity.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

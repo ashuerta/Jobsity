@@ -1,5 +1,31 @@
 ﻿$(document).ready(function () {
-    
+    var wsbroker = 'eagle.rmq.cloudamqp.com';  //mqtt websocket enabled broker
+    var wsport = 8883; // port for above
+    var client = new Paho.MQTT.Client(wsbroker, wsport, "jobsity_" + parseInt(Math.random() * 100, 10));
+    client.onConnectionLost = function (responseObject) {
+        console.log("CONNECTION LOST - " + responseObject.errorMessage);
+    };
+    client.onMessageArrived = function (message) {
+        console.log("RECEIVE ON " + message.destinationName + " PAYLOAD " + message.payloadString);
+        print_first(message.payloadString);
+    };
+    var options = {
+        timeout: 3,
+        userName: 'dsnwdiwl:dsnwdiwl',
+        password: 'k100la9Qe_zBGN6XIyLC3zXCHbrtiIbH',
+        onSuccess: function () {
+            console.log("CONNECTION SUCCESS");
+            client.subscribe('JobsityQueue', { qos: 1 });
+        },
+        onFailure: function (message) {
+            console.log("CONNECTION FAILURE - " + message.errorMessage);
+        }
+    };
+    if (location.protocol == "https:") {
+        options.useSSL = true;
+    }
+    console.log("CONNECT TO " + wsbroker + ":" + wsport);
+    client.connect(options);
 });
 
 function formatAMPM(date) {
@@ -54,8 +80,29 @@ $(".mytext").on("keyup", function (e) {
     if (e.which == 13) {
         var text = $(this).val();
         if (text !== "") {
-            insertChat("me", text);
+            let data = { user: "", msg: text, date: moment().format("YYYY-MM-DD HH:mm:ss") };
+            $.ajax({
+                type: "POST",
+                url: baseUrl + '/Chat/SendMsg',
+                data: JSON.stringify(data),
+                success: function (e) {
+                    if (e.success) {
+                        insertChat("me", text);
+                        return;
+                    }
+                    $('.error_msj  > p').text('Error: ' + e.message);
+                    return;
+                },
+                error: createError,
+                contentType: 'application/json'
+            });
+            
             $(this).val('');
         }
     }
 });
+
+function createError(e) {
+    $('.error_msj  > p').text('Error: ' + e);
+}
+
