@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29326.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Service", "Jobsity.Service\Jobsity.Service.csproj", "{1EEA4050-D1C8-414F-875E-9F163B6D370A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service", "Service", "{68AB285B-1684-47AB-8F6D-F73C2DABF1B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{516FEFC1-99F3-4137-8D5D-0F2CAEE58556}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Data", "Jobsity.Data\Jobsity.Data.csproj", "{2001D036-601B-4351-BBEF-B712B251C93D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B5FA83FF-0038-41AD-A717-239E5C67FE71}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Toolset", "Toolset", "{4FB907C1-D733-4A1F-96E8-2B17700FA1DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobsity.Core.Entity", "Jobsity.Core.Entity\Jobsity.Core.Entity.csproj", "{B28B7FAC-EE32-4977-9C4B-419F7CB7F26A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EEA4050-D1C8-414F-875E-9F163B6D370A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EEA4050-D1C8-414F-875E-9F163B6D370A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EEA4050-D1C8-414F-875E-9F163B6D370A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EEA4050-D1C8-414F-875E-9F163B6D370A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2001D036-601B-4351-BBEF-B712B251C93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2001D036-601B-4351-BBEF-B712B251C93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2001D036-601B-4351-BBEF-B712B251C93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2001D036-601B-4351-BBEF-B712B251C93D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28B7FAC-EE32-4977-9C4B-419F7CB7F26A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28B7FAC-EE32-4977-9C4B-419F7CB7F26A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28B7FAC-EE32-4977-9C4B-419F7CB7F26A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28B7FAC-EE32-4977-9C4B-419F7CB7F26A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1EEA4050-D1C8-414F-875E-9F163B6D370A} = {68AB285B-1684-47AB-8F6D-F73C2DABF1B5}
+		{2001D036-601B-4351-BBEF-B712B251C93D} = {516FEFC1-99F3-4137-8D5D-0F2CAEE58556}
+		{B28B7FAC-EE32-4977-9C4B-419F7CB7F26A} = {B5FA83FF-0038-41AD-A717-239E5C67FE71}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A8E6665-BC6F-43DC-A363-7F905C5DE2EA}
+	EndGlobalSection
+EndGlobal

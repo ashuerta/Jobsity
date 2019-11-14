@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using Jobsity.Core.Entity;
+@*@inject SignInManager<JobsityUser> SignInManager;*@
+@*@inject UserManager<JobsityUser> UserManager;*@
+@using Microsoft.Extensions.Configuration;
+@using Microsoft.AspNetCore.Http.Extensions;
+@inject IConfiguration _config
+
+<ul class="navbar-nav">
+    @if (this.Context.User.Identity.IsAuthenticated)
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity.Name!</a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="" asp-controller="Home" asp-action="SignOut" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/Home/CreateOne">Register</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" asp-area="" asp-page="/Home/Index">Login</a>
+        </li>
+    }
+</ul>
