@@ -2,37 +2,7 @@
 var pattern = /^\/stock\=/i;
 
 $(document).ready(function () {
-    //var wsbroker = location.hostname;  //mqtt websocket enabled broker
-    //var wsport = 15675; // port for above
-    //var client = new Paho.Client(wsbroker, wsport, "/ws",
-    //    "myclientid_" + parseInt(Math.random() * 100, 10));
-    //client.onConnectionLost = function (responseObject) {
-    //    console.log("CONNECTION LOST - " + responseObject.errorMessage);
-    //};
-    //client.onMessageArrived = function (message) {
-    //    console.log("RECEIVE ON " + message.destinationName + " PAYLOAD " + message.payloadString);
-    //    print_first(message.payloadString);
-    //};
-    //var options = {
-    //    timeout: 3,
-    //    //userName: 'rabbitmq',
-    //    //password: 'rabbitmq',
-    //    onSuccess: function () {
-    //        console.log("CONNECTION SUCCESS");
-    //        client.subscribe('/JobsityQueue', { qos: 1 });
-    //    },
-    //    onFailure: function (message) {
-    //        console.log("CONNECTION FAILURE - " + message.errorMessage);
-    //    }
-    //};
-    //if (location.protocol == "https:") {
-    //    options.useSSL = true;
-    //}
-    //console.log("CONNECTING TO " + wsbroker + ":" + wsport);
-    //client.connect(options);
-
     
-    //var client = Stomp.over(ws);
     var headers = {
         login: 'rabbitmq',
         passcode: 'rabbitmq',
@@ -49,8 +19,6 @@ $(document).ready(function () {
                 var msg = JSON.parse(message.body);
                 if (msg.user != userLogged)
                     insertChat(msg.user, msg, 10);
-            } else {
-                //alert("got empty message");
             }
         });
         console.log(id);
@@ -59,7 +27,6 @@ $(document).ready(function () {
         console.log('error');
     };
 
-    //client.connect(headers, on_connect, on_error, '/');
     client.connect('rabbitmq', 'rabbitmq', on_connect, on_error, '/', headers);
 
 });
