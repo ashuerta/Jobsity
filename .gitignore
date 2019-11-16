@@ -259,3 +259,29 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
+# Docker project generated files to ignore
+#  if you want to ignore files created by your editor/tools,
+#  please consider a global .gitignore https://help.github.com/articles/ignoring-files
+**/Docker/.vagrant*
+**/Docker/bin
+**/Docker/docker/docker
+**/Docker/.*.swp
+**/Docker/a.out
+**/Docker/*.orig
+**/Docker/build_src
+**/Docker/.flymake*
+**/Docker/.idea
+**/Docker/.DS_Store
+**/Docker/docs/_build
+**/Docker/docs/_static
+**/Docker/docs/_templates
+**/Docker/.gopath/
+**/Docker/.dotcloud
+**/Docker/*.test
+**/Docker/bundles/
+**/Docker/.hg/
+**/Docker/.git/
+**/Docker/vendor/pkg/
+**/Docker/pyenv
+**/Docker/Vagrantfile

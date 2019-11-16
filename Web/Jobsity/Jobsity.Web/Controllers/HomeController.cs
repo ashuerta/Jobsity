@@ -86,7 +86,7 @@ namespace Jobsity.Web.Controllers
                         //Save token in session object
                         HttpContext.Session.SetString("JWToken", jwToken.Token);
                         HttpContext.Session.SetString("JWExpiration", jwToken.Expiration.Ticks.ToString());
-
+                        HttpContext.Session.SetString("sub", entity.UserName);
                         ///var token = UtilJwt.GenerateJwt(ud, jwt);
                         var decoded = GetPrincipalToken(jwToken.Token);
                         var identity = new ClaimsIdentity(decoded.Claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -117,6 +117,7 @@ namespace Jobsity.Web.Controllers
         {
             HttpContext.Session.Remove("JWToken");
             HttpContext.Session.Remove("JWExpiration");
+            HttpContext.Session.Remove("sub");
             HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Index");
         }

@@ -53,8 +53,8 @@ namespace Jobsity.Web
             {
                 options.AddPolicy(MyAllowSpecificOrigins,
                     builder => builder
-                    //.SetIsOriginAllowed((host) => true)
-                    .WithOrigins("http://locallhost:7000")
+                    .SetIsOriginAllowed((host) => true)
+                    .WithOrigins("http://locallhost:7000", "http://locallhost:1883", "http://locallhost:8883", "http://locallhost:15674")
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());
