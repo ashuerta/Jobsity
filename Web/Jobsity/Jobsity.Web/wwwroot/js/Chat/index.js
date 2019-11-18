@@ -94,6 +94,9 @@ $(".mytext").on("keyup", function (e) {
             $.ajax({
                 type: "POST",
                 url: url,
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                },
                 data: JSON.stringify(data),
                 success: function (e) {
                     if (e.success) {

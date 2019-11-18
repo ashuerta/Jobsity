@@ -1,4 +1,6 @@
 ﻿@using Microsoft.Extensions.Configuration;
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
 @inject IConfiguration _config;
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +54,7 @@
             <script type="text/javascript">
                 var baseUrl = '@this.Context.Request.Scheme' + '://' + '@this.Context.Request.Host' + '@Url.Content("~")';
                 var api = '@_config["ApiConnection:Jobsity:Domain"]';
+                var token = '@HttpContextAccessor.HttpContext.Session.GetString("JWToken")';
             </script>
         }
         <main role="main" class="pb-3">
