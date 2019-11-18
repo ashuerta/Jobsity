@@ -37,6 +37,8 @@ namespace Jobsity.Service
             services.AddControllers()
                 .AddNewtonsoftJson();
 
+            services.AddMemoryCache();
+
             services.AddCors(options =>
             {
                 options.AddDefaultPolicy(

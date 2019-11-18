@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Jobsity.Core.Entity;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System;
@@ -26,7 +27,7 @@ namespace Jobsity.Web
             };
         }
 
-        public bool PublishMessage(object message)
+        public bool PublishMessage(JobsityMessage message)
         {
             try
             {

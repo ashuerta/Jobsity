@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using System;
+using Jobsity.Core.Entity;
 
 namespace Jobsity.Web.Controllers
 {
@@ -36,7 +37,7 @@ namespace Jobsity.Web.Controllers
         [HttpPost]
         [Route("Chat/SendMsg")]
         [Authorize(AuthenticationSchemes = CookieAuthenticationDefaults.AuthenticationScheme)]
-        public async Task<IActionResult> PublishMessage([FromBody] object message)
+        public async Task<IActionResult> PublishMessage([FromBody] JobsityMessage message)
         {
             try
             {

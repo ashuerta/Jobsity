@@ -2509,4 +2509,9 @@
     </Reference>
   </ItemGroup>
 
+
+  <ItemGroup>
+    <Folder Include="wwwroot\docs\" />
+  </ItemGroup>
+
 </Project>

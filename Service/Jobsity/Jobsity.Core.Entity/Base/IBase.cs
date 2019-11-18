@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Jobsity.Core.Entity
+﻿namespace Jobsity.Core.Entity
 {
     public interface IBase
     {
