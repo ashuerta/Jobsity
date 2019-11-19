@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "2c0d7f0f-31e5-499f-bff8-877a83ba1f21",
+		"name": "Jobsity",
+		"description": "Testing for Jobsity Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tusername: 'ashuerta',\n\tpassword: 'Jobsity@123'\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/v1/Security/SignIn",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"v1",
+						"Security",
+						"SignIn"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tusername: 'ashuerta@hotmail.com',\n\temail: 'ashuerta@jobsity.com',\n\tpassword: 'Jobsity@123'\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/v1/Security/Register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"v1",
+						"Security",
+						"Register"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "SendMsg",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\tusername: 'ashuerta@hotmail.com',\n\temail: 'ashuerta@jobsity.com',\n\tpassword: 'Jobsity@123'\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7000/v1/Security/Register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"v1",
+						"Security",
+						"Register"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc2h1ZXJ0YUBob3RtYWlsLmNvbSIsImp0aSI6IjMxN2IyY2IyLTZiYjYtNDFlZi05NWMxLWUzNzM0YTRjOTc4ZCIsImV4cCI6MTU3MzQ2NzQ1MCwiaXNzIjoiaHR0cDovL2FzaHVlcnRhLmNvbSIsImF1ZCI6Imh0dHA6Ly9hc2h1ZXJ0YS5jb20ifQ.fMHVna7JsdoEnMoE59Ilm6OvGD_876mwyxYrlOTQTt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/v1/Security/AllUsers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"v1",
+						"Security",
+						"AllUsers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResponseMsg",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc2h1ZXJ0YUBob3RtYWlsLmNvbSIsImp0aSI6IjMxN2IyY2IyLTZiYjYtNDFlZi05NWMxLWUzNzM0YTRjOTc4ZCIsImV4cCI6MTU3MzQ2NzQ1MCwiaXNzIjoiaHR0cDovL2FzaHVlcnRhLmNvbSIsImF1ZCI6Imh0dHA6Ly9hc2h1ZXJ0YS5jb20ifQ.fMHVna7JsdoEnMoE59Ilm6OvGD_876mwyxYrlOTQTt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7000/v1/Bot/ResponseMsg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7000",
+					"path": [
+						"v1",
+						"Bot",
+						"ResponseMsg"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

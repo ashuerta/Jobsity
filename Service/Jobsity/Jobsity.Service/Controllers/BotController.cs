@@ -20,7 +20,6 @@ namespace Jobsity.Service.Controllers
     {
         private readonly ILogger<BotController> _logger;
         private IWebHostEnvironment _env;
-
         private IMemoryCache _cache;
 
         public BotController(ILogger<BotController> logger, IMemoryCache memoryCache, IWebHostEnvironment env)
@@ -33,7 +32,7 @@ namespace Jobsity.Service.Controllers
         [HttpGet]
         [Route("ResponseMsg")]
         [Authorize]
-        public async Task<IActionResult> ResponseMsgAsync([FromBody] JobsityMessage message)
+        public async Task<IActionResult> ResponseMsgAsync([FromQuery] JobsityMessage message)
         {
             try
             {

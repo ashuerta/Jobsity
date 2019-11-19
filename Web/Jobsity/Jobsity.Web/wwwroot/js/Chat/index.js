@@ -47,7 +47,27 @@ function formatAMPM(date) {
 function insertChat(who, msg, time) {
     var control = "";
     var date = formatAMPM(new Date(msg.date));
+    control = '<li style="width:100%;">' +
+        '<div class="msj-rta macro">' +
+        '<i class="fas fa-hand-holding-heart fa-lg msg-icon-me"></i>' +
+        '<div class="text text-r">' +
+        '<p>' + msg.msg + '</p>' +
+        '<p><small>' + date + '</small></p>' +
+        '</div>' +
+        '<div class="avatar" style="padding:0px 0px 0px 10px !important"></div>' +
+        '</li>';
 
+    if (who === 'Help') {
+        control = '<li style="width:100%;">' +
+            '<div class="msj-rta macro">' +
+            '<i class="fas fa-robot fa-lg msg-icon-me"></i>' +
+            '<div class="text text-r">' +
+            '<p>' + msg.msg + '</p>' +
+            '<p><small>' + date + '</small></p>' +
+            '</div>' +
+            '<div class="avatar" style="padding:0px 0px 0px 10px !important"></div>' +
+            '</li>';
+    }
     if (userLogged == who) {
         control = '<li style="width:100%">' +
             '<div class="msj macro">' +
@@ -57,16 +77,6 @@ function insertChat(who, msg, time) {
             '<p><small>' + date + '</small></p>' +
             '</div>' +
             '</div>' +
-            '</li>';
-    } else {
-        control = '<li style="width:100%;">' +
-            '<div class="msj-rta macro">' +
-            '<i class="fas fa-hand-holding-heart fa-lg msg-icon-me"></i>' +
-            '<div class="text text-r">' +
-            '<p>' + msg.msg + '</p>' +
-            '<p><small>' + date + '</small></p>' +
-            '</div>' +
-            '<div class="avatar" style="padding:0px 0px 0px 10px !important"></div>' +
             '</li>';
     }
     setTimeout(
@@ -86,24 +96,29 @@ $(".mytext").on("keyup", function (e) {
         var text = $(this).val();
         if (text !== "") {
             var result = pattern.test(text);
-            var url = baseUrl + '/Chat/SendMsg';
-            if (result === true) {
-                url = api + '/Bot/ResponseMsg';
+            var url = baseUrl + 'Chat/SendMsg';
+            var type = 'POST';
+            if (result) {
+                url = api + 'Bot/ResponseMsg';
+                type = 'GET';
             }
             let data = { user: userLogged, msg: text, date: moment().format("YYYY-MM-DD HH:mm:ss") };
             $.ajax({
-                type: "POST",
+                type: type,
                 url: url,
-                headers: {
-                    'Authorization': `Bearer ${token}`,
+                beforeSend: function (xhr) {
+                    if (result) {
+                        xhr.setRequestHeader('Authorization', `Bearer ${token}`);
+                        xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+                    }
                 },
-                data: JSON.stringify(data),
+                data: result ? data : JSON.stringify(data),
                 success: function (e) {
                     if (e.success) {
-                        insertChat(data.user, data, 1);
-                        if (e.From == 'bot') {
-                            insertChat('Help Bot', e.data, 2);
+                        if (e.from == 'bot') {
+                            insertChat('Help', { user: userLogged, msg: e.data, date: moment().format("YYYY-MM-DD HH:mm:ss") }, 2);
                         }
+                        insertChat(data.user, data, 1);
                         return;
                     }
                     $('.error_msj  > p').text('Error: ' + e.message);
@@ -119,6 +134,6 @@ $(".mytext").on("keyup", function (e) {
 });
 
 function createError(e) {
-    $('.error_msj  > p').text('Error: ' + e);
+    $('.error_msj  > p').text('Error: ' + e.statusText);
 }
 
