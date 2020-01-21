@@ -99,7 +99,7 @@ $(".mytext").on("keyup", function (e) {
             var url = baseUrl + 'Chat/SendMsg';
             var type = 'POST';
             if (result) {
-                url = api + 'Bot/ResponseMsg';
+                url = api + 'Bot/StooqSource';
                 type = 'GET';
             }
             let data = { user: userLogged, msg: text, date: moment().format("YYYY-MM-DD HH:mm:ss") };

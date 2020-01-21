@@ -10,7 +10,10 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using RestSharp;
 using FileIO = System.IO;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Jobsity.Service.Controllers
 {
@@ -27,6 +30,70 @@ namespace Jobsity.Service.Controllers
             _logger = logger;
             _cache = memoryCache;
             _env = env;
+        }
+
+        [HttpGet]
+        [Route("StooqSource")]
+        [Authorize]
+        public async Task<IActionResult> StooqSourceAsync([FromQuery] JobsityMessage message)
+        {
+            try
+            {
+                // Change         : Jobcity request to read data directly from api.
+                // Change Date    : 2020/01/21 
+                var stockName = message.Msg.Substring(7);
+                var client = new RestClient($"https://stooq.com/q/l");
+                var request = new RestRequest("?s=" + stockName + "&f=sd2t2ohlcv&h&e=csv", DataFormat.None);
+
+
+                var response = await client.ExecuteGetAsync(request);
+                if (response.IsSuccessful)
+                {
+                    if (!string.IsNullOrEmpty(response.Content))
+                    {
+                        var stooqs = new List<StooqDetail>();
+                        using (var stream = new MemoryStream(response.RawBytes))
+                        using (var sr = new StreamReader(stream))
+                        {
+                            var isHeader = true;
+                            while (!sr.EndOfStream)
+                            {
+                                var row = sr.ReadLine();
+                                if (isHeader) 
+                                {
+                                    isHeader = false;
+                                    continue;
+                                }
+
+                                var l = row.Split(',').ToArray();
+
+                                var item = new StooqDetail
+                                {
+                                    Symbol = l[0],
+                                    Date = l[1],
+                                    Time = l[2],
+                                    Open = double.Parse(l[3]),
+                                    High = double.Parse(l[4]),
+                                    Low = double.Parse(l[5]),
+                                    Close = double.Parse(l[6]),
+                                    Volume = int.Parse(l[7])
+                                };
+                                stooqs.Add(item);
+                            }
+                        }
+                        var stooq = stooqs.First();
+                        var value = $"{stooq.Symbol.ToUpper()} quote is ${stooq.Open} per share.";
+                        return Ok(new { Success = true, From = "bot", Data = value });
+                    }
+                    return Ok(new { Success = true, From = "bot", Data = $"Hello {message.User}, I can't help you with {stockName.ToUpper()}." });
+                }
+                return Ok(new { Success = true, From = "bot", Data = $"Hello {message.User}, I can't help you with {stockName.ToUpper()}." });
+            }
+            catch (Exception eX)
+            {
+                _logger.LogError(eX, eX.Message);
+                return BadRequest(eX);
+            }
         }
 
         [HttpGet]

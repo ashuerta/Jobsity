@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Text;
 using AutoFixture;
 using Jobsity.Core.Entity;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Moq;
 using AutoFixture.AutoMoq;
@@ -17,6 +16,8 @@ using System.Net;
 using System.IO;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 
 namespace Jobsity.Service.Controllers.Tests
 {
@@ -60,7 +61,7 @@ namespace Jobsity.Service.Controllers.Tests
             var controller = new BotController(_mockLogger.Object, memoryCache, _mockWebHosting.Object);
 
             // Act
-            
+
             var actionResult = await controller.ResponseMsgAsync(_mockEntity);
 
 
@@ -70,6 +71,33 @@ namespace Jobsity.Service.Controllers.Tests
             Xunit.Assert.NotNull(response);
             Xunit.Assert.Equal((int)HttpStatusCode.OK, response.StatusCode.Value);
             Xunit.Assert.NotNull(response.Value);
+        }
+
+        [TestMethod()]
+        public async Task StooqSourceAsyncTest()
+        {
+            // Change         : Jobcity request to read data directly from api.
+            // Change Date    : 2020/01/21 
+            // Arrange
+            var services = new ServiceCollection();
+            services.AddMemoryCache();
+            var serviceProvider = services.BuildServiceProvider();
+            var memoryCache = serviceProvider.GetService<IMemoryCache>();
+            var controller = new BotController(_mockLogger.Object, memoryCache, _mockWebHosting.Object);
+
+            // Act
+            var actionResult = await controller.ResponseMsgAsync(_mockEntity);
+
+
+            // Assert
+            Xunit.Assert.NotNull(actionResult);
+            var response = Xunit.Assert.IsAssignableFrom<OkObjectResult>(actionResult);
+            Xunit.Assert.NotNull(response);
+            Xunit.Assert.Equal((int)HttpStatusCode.OK, response.StatusCode.Value);
+            Xunit.Assert.NotNull(response.Value);
+            var json = JsonConvert.SerializeObject(response.Value, Formatting.Indented);
+            JObject jo = JObject.Parse(json);
+            Xunit.Assert.StartsWith("AAPL.US quote is $265.8 per share.", jo["Data"].ToString());
         }
     }
 }
