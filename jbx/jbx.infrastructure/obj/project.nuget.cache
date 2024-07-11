@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kNkuOTue9Ls=",
+  "dgSpecHash": "JUWKmhHB3HiEjNengpxqwhUB8X1C8hmoiQCVB8cQugaG7on4CdSBvzoCG7VpctcEEwFQfbTnbfajLEDA9HBs8g==",
   "success": true,
-  "projectFilePath": "/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj",
+  "projectFilePath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj",
   "expectedPackageFiles": [
     "/Users/abrahamhuerta/.nuget/packages/azure.core/1.35.0/azure.core.1.35.0.nupkg.sha512",
     "/Users/abrahamhuerta/.nuget/packages/azure.identity/1.10.3/azure.identity.1.10.3.nupkg.sha512",
@@ -214,9 +214,7 @@
     "/Users/abrahamhuerta/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
     "/Users/abrahamhuerta/.nuget/packages/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg.sha512",
     "/Users/abrahamhuerta/.nuget/packages/system.xml.xpath/4.3.0/system.xml.xpath.4.3.0.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/system.xml.xpath.xdocument/4.3.0/system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+    "/Users/abrahamhuerta/.nuget/packages/system.xml.xpath.xdocument/4.3.0/system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

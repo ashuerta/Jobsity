@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Y5EWm3EZ+2s=",
+  "dgSpecHash": "SJLuU2bZNZW9TZTF8rLHRrBbdz8NyPtU+rFbsud2odWqPetAvYiVUhBz8vbgQUY3UOVj/gIq1jx4RwA1Nqpiyg==",
   "success": true,
-  "projectFilePath": "/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.core/jbx.core.csproj",
+  "projectFilePath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.core/jbx.core.csproj",
   "expectedPackageFiles": [
     "/Users/abrahamhuerta/.nuget/packages/microsoft.aspnetcore.cryptography.internal/7.0.20/microsoft.aspnetcore.cryptography.internal.7.0.20.nupkg.sha512",
     "/Users/abrahamhuerta/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/7.0.20/microsoft.aspnetcore.cryptography.keyderivation.7.0.20.nupkg.sha512",
@@ -26,9 +26,7 @@
     "/Users/abrahamhuerta/.nuget/packages/microsoft.identitymodel.jsonwebtokens/7.6.2/microsoft.identitymodel.jsonwebtokens.7.6.2.nupkg.sha512",
     "/Users/abrahamhuerta/.nuget/packages/microsoft.identitymodel.logging/7.6.2/microsoft.identitymodel.logging.7.6.2.nupkg.sha512",
     "/Users/abrahamhuerta/.nuget/packages/microsoft.identitymodel.tokens/7.6.2/microsoft.identitymodel.tokens.7.6.2.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/system.identitymodel.tokens.jwt/7.6.2/system.identitymodel.tokens.jwt.7.6.2.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512"
+    "/Users/abrahamhuerta/.nuget/packages/system.identitymodel.tokens.jwt/7.6.2/system.identitymodel.tokens.jwt.7.6.2.nupkg.sha512"
   ],
   "logs": []
 }

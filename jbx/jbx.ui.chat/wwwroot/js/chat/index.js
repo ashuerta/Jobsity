@@ -52,6 +52,12 @@ function insertChat(who, msg, time) {
         url: api + 'api/Message/GetAllMsgs',
         dataType: 'json',
         contentType: "application/x-www-form-urlencoded",
+        beforeSend: function (xhr) {
+            if (result) {
+                xhr.setRequestHeader('Authorization', `Bearer ${token}`);
+                xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+            }
+        },
         success: function (e) {
             if (e.isSuccess) {
                 control += loadMessages(e.data, who);

@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace jbx.api.chat.Controllers
 {
     [Route("api/[controller]")]
-    public class HomeController : Controller
+    public class MessageController : Controller
     {
         private readonly IMessageServices _service;
 
-        public HomeController(IMessageServices service)
+        public MessageController(IMessageServices service)
         {
             _service = service;
         }

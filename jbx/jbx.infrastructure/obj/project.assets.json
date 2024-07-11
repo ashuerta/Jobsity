@@ -10394,11 +10394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj",
+      "projectUniqueName": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj",
       "projectName": "jbx.infrastructure",
-      "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj",
+      "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj",
       "packagesPath": "/Users/abrahamhuerta/.nuget/packages/",
-      "outputPath": "/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/",
+      "outputPath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.infrastructure/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -10417,8 +10417,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.core/jbx.core.csproj": {
-              "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.core/jbx.core.csproj"
+            "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.core/jbx.core.csproj": {
+              "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.core/jbx.core.csproj"
             }
           }
         }
@@ -10427,11 +10427,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -10508,22 +10503,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.20, 7.0.20]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.20, 7.0.20]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.316/RuntimeIdentifierGraph.json"
       }
     }
   }

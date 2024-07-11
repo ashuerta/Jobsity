@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TopIF9zQndw=",
+  "dgSpecHash": "Xbpm++440NdzxEwCoLeVWpGU+fX1odtUuA5Ih/UnV5VJT3P3Sy9HfVzz09oPSTSb9RKjkQ60jxkC7QM7NNxPrw==",
   "success": true,
-  "projectFilePath": "/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.api.chat/jbx.api.chat.csproj",
+  "projectFilePath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.api.chat/jbx.api.chat.csproj",
   "expectedPackageFiles": [
     "/Users/abrahamhuerta/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/abrahamhuerta/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -307,10 +307,7 @@
     "/Users/abrahamhuerta/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/Users/abrahamhuerta/.nuget/packages/system.windows.extensions/6.0.0/system.windows.extensions.6.0.0.nupkg.sha512",
     "/Users/abrahamhuerta/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
-    "/Users/abrahamhuerta/.nuget/packages/microsoft.netcore.app.host.osx-x64/7.0.20/microsoft.netcore.app.host.osx-x64.7.0.20.nupkg.sha512"
+    "/Users/abrahamhuerta/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512"
   ],
   "logs": []
 }

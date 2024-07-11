@@ -1,52 +1,51 @@
 ﻿<Properties StartupConfiguration="{85BB8F55-1248-4D3A-91A7-A5505290CE10}|http">
-  <MonoDevelop.Ide.ItemProperties.api.jbx.api.chat PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.ui.jbx.ui.chat PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.infrastructure/Middlewares/HttpRequestHandler.cs" relfile="jbx.infrastructure/Middlewares/HttpRequestHandler.cs" line="53" column="1" />
+      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.core/Utils/JwtUtils.cs" relfile="jbx.core/Utils/JwtUtils.cs" line="70" column="1" />
+      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" relfile="jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" line="94" column="1" />
+      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.infrastructure/Rabbitmq/AmqpService.cs" relfile="jbx.infrastructure/Rabbitmq/AmqpService.cs" line="63" column="1" />
+      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" relfile="jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" line="79" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.api.jbx.api.chat PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs">
     <Files>
-      <File FileName="jbx.infrastructure/Middlewares/HttpRequestHandler.cs" Line="43" Column="1" />
-      <File FileName="jbx.ui.chat/wwwroot/css/site.css" Line="51" Column="18" />
-      <File FileName="jbx.ui.chat/Pages/Dashboard/Index.cshtml" Line="54" Column="15" />
-      <File FileName="jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" Line="71" Column="84" />
-      <File FileName="jbx.ui.chat/Program.cs" Line="115" Column="1" />
-      <File FileName="jbx.ui.chat/Pages/Shared/_Layout.cshtml" Line="58" Column="1" />
-      <File FileName="jbx.ui.chat/wwwroot/js/chat/index.js" Line="77" Column="16" />
-      <File FileName="jbx.api.chat/Program.cs" Line="107" Column="2" />
-      <File FileName="jbx.api.chat/Controllers/HomeController.cs" Line="26" Column="23" />
-      <File FileName="jbx.api.chat/Controllers/AuthController.cs" Line="9" Column="32" />
+      <File FileName="jbx.infrastructure/Middlewares/HttpRequestHandler.cs" />
+      <File FileName="jbx.ui.chat/wwwroot/css/site.css" />
+      <File FileName="jbx.ui.chat/Pages/Dashboard/Index.cshtml" />
+      <File FileName="jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" Line="71" Column="18" />
+      <File FileName="jbx.ui.chat/Program.cs" />
+      <File FileName="jbx.ui.chat/Pages/Shared/_Layout.cshtml" />
+      <File FileName="jbx.ui.chat/wwwroot/js/chat/index.js" />
+      <File FileName="jbx.api.chat/Program.cs" />
+      <File FileName="jbx.api.chat/Controllers/AuthController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="jbx" expanded="True">
-            <Node name="api" expanded="True">
-              <Node name="jbx.api.chat">
-                <Node name="Controllers" expanded="True" />
-                <Node name="Interfaces" expanded="True" />
-                <Node name="MapperProfiles" expanded="True" />
-                <Node name="Services" expanded="True" />
-                <Node name="appsettings.json" expanded="True" />
-              </Node>
-            </Node>
-            <Node name="core" expanded="True">
-              <Node name="jbx.core" expanded="True">
+          <Node name="jbx">
+            <Node name="core">
+              <Node name="jbx.core">
                 <Node name="Entities" expanded="True">
                   <Node name="Messages" expanded="True" />
                 </Node>
                 <Node name="Utils" expanded="True" />
               </Node>
             </Node>
-            <Node name="infrastructure" expanded="True">
-              <Node name="jbx.infrastructure" expanded="True">
+            <Node name="infrastructure">
+              <Node name="jbx.infrastructure">
+                <Node name="Middlewares" expanded="True" />
                 <Node name="Repositories" expanded="True" />
               </Node>
             </Node>
-            <Node name="ui" expanded="True">
+            <Node name="ui">
               <Node name="jbx.ui.chat">
                 <Node name="Pages" expanded="True">
-                  <Node name="Account" expanded="True">
-                    <Node name="Login.cshtml" expanded="True" />
-                    <Node name="Register.cshtml" expanded="True" />
-                  </Node>
                   <Node name="Dashboard" expanded="True">
                     <Node name="Index.cshtml" expanded="True">
                       <Node name="Index.cshtml.cs" selected="True" />
@@ -69,27 +68,6 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State>
-          <Value>user</Value>
-          <Value>msg</Value>
-          <Value>Request</Value>
-          <Value>date</Value>
-          <Value>eX</Value>
-        </State>
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.ui.jbx.ui.chat PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/Middlewares/HttpRequestHandler.cs" relfile="jbx.infrastructure/Middlewares/HttpRequestHandler.cs" line="53" column="1" />
-      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.core/Utils/JwtUtils.cs" relfile="jbx.core/Utils/JwtUtils.cs" line="70" column="1" />
-      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" relfile="jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" line="94" column="1" />
-      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/Rabbitmq/AmqpService.cs" relfile="jbx.infrastructure/Rabbitmq/AmqpService.cs" line="63" column="1" />
-      <Breakpoint file="/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" relfile="jbx.ui.chat/Pages/Dashboard/Index.cshtml.cs" line="79" column="1" />
-    </BreakpointStore>
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>
