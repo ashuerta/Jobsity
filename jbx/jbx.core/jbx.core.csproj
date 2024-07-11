@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Entities\" />
+    <None Remove="Events\" />
+    <None Remove="Helpers\" />
+    <None Remove="Entities\Security\" />
+    <None Remove="Models\" />
+    <None Remove="Models\Responses\" />
+    <None Remove="Entities\Messages\" />
+    <None Remove="Interfaces\" />
+    <None Remove="Models\Identity\" />
+    <None Remove="Utils\" />
+    <None Remove="Models\Rabbitmq\" />
+    <None Remove="Models\Bot\" />
+    <None Remove="Models\Message\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Entities\" />
+    <Folder Include="Events\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Entities\Security\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Responses\" />
+    <Folder Include="Entities\Messages\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Models\Identity\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Models\Rabbitmq\" />
+    <Folder Include="Models\Bot\" />
+    <Folder Include="Models\Message\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.2" />
+  </ItemGroup>
+</Project>

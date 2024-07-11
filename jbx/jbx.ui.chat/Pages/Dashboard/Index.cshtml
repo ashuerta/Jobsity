@@ -1,0 +1,71 @@
+@page
+@model jbx.ui.chat.Pages.Dashboard.DashboardModel
+@inject IHttpContextAccessor HttpContextAccessor
+@Html.AntiForgeryToken()
+
+@{
+    ViewData["Title"] = "Dashboard";
+    Layout = "_Layout";
+}
+<link rel="stylesheet" href="~/css/chat.css" />
+
+@{
+    <script type="text/javascript">
+        var api = '@Model.Configuration["Api:chat"]';
+        var token = '@HttpContextAccessor.HttpContext!.Session.GetString("jwtToken")';
+        var userLogged = '@HttpContextAccessor.HttpContext!.Session.GetString("sub")';
+    </script>
+}
+<div id="app" class="app-main">
+    <section class="section">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-12 col-sm-8 offset-sm-2">
+                    @*col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">*@
+                    <div class="login-brand">
+                        Jobsity
+                    </div>
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h4>Chat</h4>
+                            <div class="row">
+                                <div class="form-group col-12">
+                                    <div class="error_msj">
+                                        @Html.ValidationMessage("General", null, "p")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="col-sm-12 frame">
+                                <ul id="msgChat"></ul>
+                                <div>
+                                    <div class="msj-rta macro" style="margin:auto">
+                                        <div class="text text-r" style="background:whitesmoke !important">
+                                            <input class="mytext" placeholder="Type a message..." />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- jQuery -->
+<script src="~/js/jquery-3.7.1.min.js"></script>
+
+<!-- MQTT scripts -->
+<script src="~/js/Chat/mqttws31.js"></script>
+
+<!-- include the client library -->
+<script src="~/js/Chat/stomp.js"></script>
+<!-- Index scripts -->
+<script src="~/js/Chat/index.js"></script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

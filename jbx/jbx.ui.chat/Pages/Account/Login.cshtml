@@ -1,0 +1,56 @@
+﻿@page
+@model jbx.ui.chat.Pages.Account.LoginModel
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_LoginLayout";
+}
+
+<section class="top-header-space">
+    <div class="row d-flex justify-content-center col-12">
+        <div class="col-4 border rounded m-20">
+            <form method="post" class="py-5">
+                <div class="d-flex justify-content-center">
+                    <i class="icon-map-marker icon-4x text-success"></i>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+                    <div asp-validation-summary="All" class="text-danger"></div>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Username" class="form-control" placeholder="Email address" required autofocus />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Password" class="form-control" placeholder="Password" required type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group fst-normal">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-check">
+                                <label asp-for="RememberMe">
+                                    <input asp-for="RememberMe" />
+                                    Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <p class="col-12">
+                                <a id="forgot-password" asp-page="/ForgotPassword">Forgot password?</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group d-grid gap-2">
+                    <button class="btn btn-lg btn-success" asp-page-handler="Login">Sign in</button>
+                </div>
+            </form>
+            <div class="row col-12">
+                <p class="col-12 fw-light text-center">
+                    Don't have an account?
+                    <a asp-page="/Account/Register" asp-route-returnUrl="@Model.ReturnUrl">Sign up</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

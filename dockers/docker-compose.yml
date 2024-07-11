@@ -1,0 +1,48 @@
+# Docker-compose for Jobsity
+
+version: '3.7'
+
+services:
+    jobsity-db:
+      image: "mcr.microsoft.com/mssql/server:2022-CU10-ubuntu-22.04"
+      container_name: "jobsity-db"
+      ports: 
+        - "1435:1433"
+      volumes:
+        - sqlsystem:/var/opt/mssql/
+        - sqldata:/var/opt/sqlserver/data
+        - sqllog:/var/opt/sqlserver/log
+        - sqlbackup:/var/opt/sqlserver/backup
+      environment:
+        SA_PASSWORD: "Jsql2024.*"
+        ACCEPT_EULA: "Y"
+    rabbitmq:
+      image: jobsityrabbitmq:latest
+      build:
+        context: ./
+        dockerfile: RabbitmqCustomDocker
+        target: jobsityrabbitmq
+      container_name: "rabbitmq-service"
+      tty: true
+      hostname: rabbitmq
+      ports:
+        - 5672:5672
+        - 15670:15670
+        - 15672:15672
+        - 15674:15674
+      volumes:
+        - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
+        - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+      environment:
+        RABBITMQ_ERLANG_COOKIE: 6085e2412b6fa88647466c6a81c0cea0
+        RABBITMQ_DEFAULT_USER: rabbitmq
+        RABBITMQ_DEFAULT_PASS: rabbitmq
+        RABBITMQ_DEFAULT_VHOST: /
+      depends_on:
+        - jobsity-db
+volumes:
+  sqlsystem:
+  sqldata:
+  sqllog:
+  sqlbackup:
+        

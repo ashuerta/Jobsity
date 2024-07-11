@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/jbx.api.chat.props" />
+</Project>

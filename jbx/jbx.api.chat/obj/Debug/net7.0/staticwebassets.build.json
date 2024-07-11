@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "g2tJksbeYi/T5Nwpm8WEE95EzPzLUcJM7as4+SFuuyc=",
+  "Source": "jbx.api.chat",
+  "BasePath": "_content/jbx.api.chat",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

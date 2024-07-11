@@ -1,0 +1,17 @@
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/bin/Debug/net7.0/jbx.infrastructure.deps.json
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/bin/Debug/net7.0/jbx.infrastructure.runtimeconfig.json
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/bin/Debug/net7.0/jbx.infrastructure.dll
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/bin/Debug/net7.0/jbx.infrastructure.pdb
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/bin/Debug/net7.0/jbx.core.dll
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/bin/Debug/net7.0/jbx.core.pdb
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.csproj.AssemblyReference.cache
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.AssemblyInfoInputs.cache
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.AssemblyInfo.cs
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.csproj.CoreCompileInputs.cache
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.dll
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/refint/jbx.infrastructure.dll
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.pdb
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.genruntimeconfig.cache
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/ref/jbx.infrastructure.dll
+/Users/abrahamhuerta/Desktop/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infr.02B3608D.Up2Date

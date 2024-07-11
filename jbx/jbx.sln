@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{B5F91E71-2919-426B-B0C2-3B5D71F19B80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jbx.core", "jbx.core\jbx.core.csproj", "{7D2FBC96-1E38-4F84-89E1-BCE717C72C97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "api", "api", "{82DF7914-121E-46FC-8917-5C28F2ADF4B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jbx.api.chat", "jbx.api.chat\jbx.api.chat.csproj", "{85BB8F55-1248-4D3A-91A7-A5505290CE10}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{391B90D4-6876-4F5B-A4D8-47186B1DC1ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jbx.infrastructure", "jbx.infrastructure\jbx.infrastructure.csproj", "{E0F0FD6B-9EE7-4455-ABAF-15263FE23468}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ui", "ui", "{D001CBF2-4AF8-4166-BC96-3F1C2711B4C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "jbx.ui.chat", "jbx.ui.chat\jbx.ui.chat.csproj", "{0AC3255C-F952-45CA-A828-4F218507F304}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D2FBC96-1E38-4F84-89E1-BCE717C72C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D2FBC96-1E38-4F84-89E1-BCE717C72C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D2FBC96-1E38-4F84-89E1-BCE717C72C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D2FBC96-1E38-4F84-89E1-BCE717C72C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85BB8F55-1248-4D3A-91A7-A5505290CE10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85BB8F55-1248-4D3A-91A7-A5505290CE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85BB8F55-1248-4D3A-91A7-A5505290CE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85BB8F55-1248-4D3A-91A7-A5505290CE10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0F0FD6B-9EE7-4455-ABAF-15263FE23468}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0F0FD6B-9EE7-4455-ABAF-15263FE23468}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0F0FD6B-9EE7-4455-ABAF-15263FE23468}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0F0FD6B-9EE7-4455-ABAF-15263FE23468}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AC3255C-F952-45CA-A828-4F218507F304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AC3255C-F952-45CA-A828-4F218507F304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AC3255C-F952-45CA-A828-4F218507F304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AC3255C-F952-45CA-A828-4F218507F304}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86B51D52-8217-4B93-A045-EAC1222627BD}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D2FBC96-1E38-4F84-89E1-BCE717C72C97} = {B5F91E71-2919-426B-B0C2-3B5D71F19B80}
+		{85BB8F55-1248-4D3A-91A7-A5505290CE10} = {82DF7914-121E-46FC-8917-5C28F2ADF4B9}
+		{E0F0FD6B-9EE7-4455-ABAF-15263FE23468} = {391B90D4-6876-4F5B-A4D8-47186B1DC1ED}
+		{0AC3255C-F952-45CA-A828-4F218507F304} = {D001CBF2-4AF8-4166-BC96-3F1C2711B4C3}
+	EndGlobalSection
+EndGlobal
