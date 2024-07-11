@@ -6,6 +6,7 @@ using jbx.core.Entities.Security;
 using jbx.core.Interfaces;
 using jbx.core.Utils;
 using jbx.infrastructure.Contexts;
+using jbx.infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -83,6 +84,8 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddScoped<IJwtUtils, JwtUtils>();
 builder.Services.AddScoped<IUserServices, UserServices>();
+builder.Services.AddScoped<IMessageRepository, MessageRepository>();
+builder.Services.AddScoped<IMessageServices, MessageServices>();
 
 builder.Services.AddControllers();
 

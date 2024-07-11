@@ -14333,11 +14333,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.api.chat/jbx.api.chat.csproj",
+      "projectUniqueName": "/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.api.chat/jbx.api.chat.csproj",
       "projectName": "jbx.api.chat",
-      "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.api.chat/jbx.api.chat.csproj",
+      "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.api.chat/jbx.api.chat.csproj",
       "packagesPath": "/Users/abrahamhuerta/.nuget/packages/",
-      "outputPath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.api.chat/obj/",
+      "outputPath": "/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.api.chat/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -14350,18 +14350,17 @@
       ],
       "sources": {
         "/usr/local/share/dotnet/library-packs": {},
-        "/usr/local/share/dotnet/sdk/7.0.316/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.core/jbx.core.csproj": {
-              "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.core/jbx.core.csproj"
+            "/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/jbx.core.csproj": {
+              "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/jbx.core.csproj"
             },
-            "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj": {
-              "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj"
+            "/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj": {
+              "projectPath": "/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.infrastructure/jbx.infrastructure.csproj"
             }
           }
         }
@@ -14370,6 +14369,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -14448,6 +14452,20 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-x64",
+            "version": "[7.0.20, 7.0.20]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.20, 7.0.20]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -14456,7 +14474,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.316/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.302/RuntimeIdentifierGraph.json"
       }
     }
   }

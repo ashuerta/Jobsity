@@ -23,3 +23,16 @@
 /Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.pdb
 /Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.core/obj/Debug/net7.0/ref/jbx.core.dll
 /Users/abrahamhuerta/Desktop/Jobsity/git/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.sourcelink.json
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/bin/Debug/net7.0/jbx.core.deps.json
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/bin/Debug/net7.0/jbx.core.dll
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/bin/Debug/net7.0/jbx.core.pdb
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.csproj.AssemblyReference.cache
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.AssemblyInfoInputs.cache
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.AssemblyInfo.cs
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.csproj.CoreCompileInputs.cache
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.dll
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/refint/jbx.core.dll
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.pdb
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/ref/jbx.core.dll
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.core/obj/Debug/net7.0/jbx.core.sourcelink.json

@@ -43,7 +43,6 @@ namespace jbx.ui.chat.Pages.Dashboard
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                 new MediaTypeWithQualityHeaderValue("application/json"));
-            client.DefaultRequestHeaders.Add("Authorization", $"Bearer {HttpContext.Session.GetString("jwtToken")}");
         }
 
         public void OnGet()
@@ -73,6 +72,7 @@ namespace jbx.ui.chat.Pages.Dashboard
                 };
                 if (r)
                 {
+                    client.DefaultRequestHeaders.Add("Authorization", $"Bearer {HttpContext.Session.GetString("jwtToken")}");
                     await Task.Delay(500);
                     var responseInsertMessage = await client.PostAsJsonAsync(
                     "api/message/AddMsg", model);

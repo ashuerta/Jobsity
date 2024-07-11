@@ -53,10 +53,8 @@ function insertChat(who, msg, time) {
         dataType: 'json',
         contentType: "application/x-www-form-urlencoded",
         beforeSend: function (xhr) {
-            if (result) {
-                xhr.setRequestHeader('Authorization', `Bearer ${token}`);
-                xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-            }
+             xhr.setRequestHeader('Authorization', `Bearer ${token}`);
+             xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
         },
         success: function (e) {
             if (e.isSuccess) {

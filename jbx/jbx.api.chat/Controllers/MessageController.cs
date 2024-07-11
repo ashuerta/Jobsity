@@ -25,7 +25,10 @@ namespace jbx.api.chat.Controllers
         [HttpPost]
         [Route("AddMsg")]
         [Authorize]
-        public async Task<IActionResult> AddMessageAsync(MessageViewModel model) => Ok(await Task.Run(() => _service.AddMessageAsync(model)));
+        public async Task<IActionResult> AddMessageAsync([FromBody] MessageViewModel model)
+        {
+             return Ok(await Task.Run(() => _service.AddMessageAsync(model)));
+        }
     }
 }
 
