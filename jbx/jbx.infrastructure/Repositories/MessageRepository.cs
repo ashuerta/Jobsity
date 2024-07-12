@@ -12,7 +12,7 @@ namespace jbx.infrastructure.Repositories
 
 		public  IEnumerable<Message> GetMessages() =>
 			 _dbSet
-				.OrderByDescending(o => o.Date)
+				.OrderBy(o => o.Date)
 				.Take(50);
 
     }

@@ -1,5 +1,6 @@
 ﻿using jbx.api.chat.Interfaces;
 using jbx.core.Models.Message;
+using jbx.core.Models.Rabbitmq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,9 +26,33 @@ namespace jbx.api.chat.Controllers
         [HttpPost]
         [Route("AddMsg")]
         [Authorize]
-        public async Task<IActionResult> AddMessageAsync([FromBody] MessageViewModel model)
+        public async Task<IActionResult> AddMessageAsync(JobsityMessage model)
         {
              return Ok(await Task.Run(() => _service.AddMessageAsync(model)));
+        }
+
+        [HttpPost]
+        [Route("hola")]
+        [Authorize]
+        public async Task<IActionResult> AddHolaAsync([FromBody]JobsityMessage model)
+        {
+            return Ok(await Task.Run(() => _service.AddMessageAsync(model)));
+        }
+
+        [HttpPost]
+        [Route("hi")]
+        [Authorize]
+        public async Task<IActionResult> AddhiAsync(JobsityMessage model)
+        {
+            return Ok(await Task.Run(() => _service.AddMessageAsync(model)));
+        }
+
+        [HttpPost]
+        [Route("bb")]
+        public async Task<IActionResult> AddbbAsync()
+        {
+            await Task.Delay(5);
+            return Ok();
         }
     }
 }

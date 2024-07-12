@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("jbx.ui.chat")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d729ddb6ba5434006f039a215a4d42854d4cceea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3456e5af0ae991c89afba0b38ea27f33fc7e68a6")]
 [assembly: System.Reflection.AssemblyProductAttribute("jbx.ui.chat")]
 [assembly: System.Reflection.AssemblyTitleAttribute("jbx.ui.chat")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

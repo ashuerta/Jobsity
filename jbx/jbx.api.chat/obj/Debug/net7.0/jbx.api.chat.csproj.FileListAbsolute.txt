@@ -832,5 +832,4 @@
 /Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.api.chat/obj/Debug/net7.0/jbx.api.chat.pdb
 /Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.api.chat/obj/Debug/net7.0/jbx.api.chat.genruntimeconfig.cache
 /Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.api.chat/obj/Debug/net7.0/ref/jbx.api.chat.dll
-/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.api.chat/obj/Debug/net7.0/jbx.api.chat.sourcelink.json
-/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.api.chat/obj/Debug/net7.0/jbx.api..4F71FD09.Up2Date
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.api.chat/obj/Debug/net7.0/jbx.api.chat.csproj.CopyComplete

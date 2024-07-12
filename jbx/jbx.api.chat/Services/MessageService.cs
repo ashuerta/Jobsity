@@ -3,6 +3,7 @@ using jbx.api.chat.Interfaces;
 using jbx.core.Entities.Messages;
 using jbx.core.Interfaces;
 using jbx.core.Models.Message;
+using jbx.core.Models.Rabbitmq;
 using jbx.core.Models.Responses;
 using Microsoft.AspNetCore.Mvc;
 
@@ -19,12 +20,16 @@ namespace jbx.api.chat.Services
             _repository = repository;
         }
 
-        public async Task<JobsityResponse> AddMessageAsync([FromBody] MessageViewModel model)
+        public async Task<JobsityResponse> AddMessageAsync(JobsityMessage model)
         {
             try
             {
                 var msg = _mapper.Map<Message>(model);
+                msg.Id = Guid.NewGuid();
+                msg.Consumer = "C";
                 await _repository.AddAsync(msg, CancellationToken.None);
+                await _repository.SaveAsync();
+
                 return new JobsityResponse
                 {
                     Message = "Success",

@@ -49,5 +49,4 @@
 /Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.pdb
 /Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.genruntimeconfig.cache
 /Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/ref/jbx.infrastructure.dll
-/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.sourcelink.json
-/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infr.02B3608D.Up2Date
+/Users/abrahamhuerta/Desktop/Jobsity/Jobsity/jbx/jbx.infrastructure/obj/Debug/net7.0/jbx.infrastructure.csproj.CopyComplete

@@ -29,6 +29,8 @@ $(document).ready(function () {
 
     client.connect('rabbitmq', 'rabbitmq', on_connect, on_error, '/', headers);
 
+    insertChat(userLogged, '', 1);
+
 });
 
 
@@ -70,6 +72,11 @@ function insertChat(who, msg, time) {
                         '<div class="avatar" style="padding:0px 0px 0px 10px !important"></div>' +
                         '</li>';
                 }
+                setTimeout(
+                    function () {
+                        $("#msgChat").append(control);
+
+                    }, time);
                 return;
             }
             $('.error_msj  > p').text('Error: ' + e.message);
@@ -77,39 +84,35 @@ function insertChat(who, msg, time) {
         },
         error: createError,
     });
-    
-    setTimeout(
-        function () {
-            $("#msgChat").append(control);
-
-        }, time);
-
 }
 
 function loadMessages(data, who) {
     var messageQueue = "";
-    messageQueue += '<li style="width:100%;">' +
-        '<div class="msj-rta macro">' +
-        '<i class="fas fa-hand-holding-heart fa-lg msg-icon-me"></i>' +
-        '<div class="text text-r">' +
-        '<p>' + msg.msg + '</p>' +
-        '<p><small>' + date + '</small></p>' +
-        '</div>' +
-        '<div class="avatar" style="padding:0px 0px 0px 10px !important"></div>' +
-        '</li>';
-
-
-    if (userLogged == who) {
-        messageQueue += '<li style="width:100%">' +
-            '<div class="msj macro">' +
+    data.forEach((e, i) => {
+        if (userLogged == who) {
+            messageQueue += '<li style="width:100%">' +
+                '<div class="msj macro">' +
+                '<i class="fas fa-hand-holding-heart fa-lg msg-icon-me"></i>' +
+                '<div class="text text-l">' +
+                '<p>' + e.typedMessage + '</p>' +
+                '<p><small>' + e.date + '</small></p>' +
+                '</div>' +
+                '</div>' +
+                '</li>';
+            return;
+        }
+        messageQueue += '<li style="width:100%;">' +
+            '<div class="msj-rta macro">' +
             '<i class="fas fa-hand-holding-heart fa-lg msg-icon-me"></i>' +
-            '<div class="text text-l">' +
-            '<p>' + msg.msg + '</p>' +
-            '<p><small>' + date + '</small></p>' +
+            '<div class="text text-r">' +
+            '<p>' + e.typedMessage + '</p>' +
+            '<p><small>' + e.date + '</small></p>' +
             '</div>' +
-            '</div>' +
+            '<div class="avatar" style="padding:0px 0px 0px 10px !important"></div>' +
             '</li>';
-    }
+
+    });
+    return messageQueue;
 }
 
 function resetChat() {

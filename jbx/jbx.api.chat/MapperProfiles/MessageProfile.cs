@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using jbx.core.Entities.Messages;
-using jbx.core.Models.Message;
+using jbx.core.Models.Rabbitmq;
 
 namespace jbx.api.chat.MapperProfiles
 {
@@ -8,12 +8,12 @@ namespace jbx.api.chat.MapperProfiles
     {
 		public MessageProfile()
 		{
-            CreateMap<Message, MessageViewModel>()
+            CreateMap<Message, JobsityMessage>()
                 .ForMember(dest => dest.Msg,
                 opt => opt.MapFrom(src => src.TypedMessage))
                 .ForMember(dest => dest.User,
                 opt => opt.MapFrom(src => src.Sender));
-            CreateMap<MessageViewModel, Message>()
+            CreateMap<JobsityMessage, Message>()
                 .ForMember(dest => dest.Sender,
                 opt => opt.MapFrom(src => src.User))
                 .ForMember(dest => dest.TypedMessage,

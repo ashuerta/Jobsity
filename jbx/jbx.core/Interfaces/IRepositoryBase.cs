@@ -1,5 +1,4 @@
 ﻿using System.Linq.Expressions;
-using jbx.core.Entities;
 
 namespace jbx.core.Interfaces
 {
@@ -12,6 +11,7 @@ namespace jbx.core.Interfaces
 		IQueryable<T> GetAll();
         IQueryable<T> GetAllByFilter(Expression<Func<T, bool>> predicate);
 		T GetById(Guid Id);
+		Task SaveAsync();
     }
 }
 
