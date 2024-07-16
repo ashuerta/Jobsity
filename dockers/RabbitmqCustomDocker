@@ -21,6 +21,9 @@ RUN rabbitmq-plugins enable --offline rabbitmq_web_mqtt_examples
 RUN rabbitmq-plugins enable --offline rabbitmq_web_stomp_examples
 RUN rabbitmq-plugins enable --offline rabbitmq_auth_backend_http
 
+RUN \
+    echo 'loopback_users.guest = false' >> /etc/rabbitmq/rabbitmq.conf && \
+    echo 'web_stomp.ws_frame = binary' >> /etc/rabbitmq/rabbitmq.conf
 
 # Expose ports.
 EXPOSE 5672 15670 15672 15674
