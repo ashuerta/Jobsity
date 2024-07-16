@@ -4,26 +4,25 @@ Chat Bot
 
 ##### Mandatory Features (Copy from PDF)
 <ul>
-	<li>✔ Allow registered users to log in and talk with other users in a chatroom.</li>
-	<li>✔ Allow users to post messages as commands into the chatroom with the following format /stock=stock_code</li>
-	<li>✔ Create a decoupled bot that will call an API using the stock_code as a parameter
+	<li> -Allow registered users to log in and talk with other users in a chatroom.</li>
+	<li> -Allow users to post messages as commands into the chatroom with the following format /stock=stock_code</li>
+	<li> -Create a decoupled bot that will call an API using the stock_code as a parameter
 (https://stooq.com/q/l/?s=aapl.us&f=sd2t2ohlcv&h&e=csv, here aapl.us is the
 stock_code).</li>
-	<li>✔ The bot should parse the received CSV file and then it should send a message back
+	<li> -The bot should parse the received CSV file and then it should send a message back
 	into the chatroom using a message broker like RabbitMQ. The message will be a stock quote
 using the following format: “APPL.US quote is $93.42 per share”. The post owner will be
 the bot.</li>
-	<li>✔ Have the chat messages ordered by their timestamps and show only the last 50
+	<li> -Have the chat messages ordered by their timestamps and show only the last 50
 messages.</li>
-	<li>✔ Unit test the functionality you prefer.</li>
+	<li> -Unit test the functionality you prefer.</li>
 </ul>
 
 ##### Bonus (optional)
 <ul>
-	<li>✔ Have more than one chatroom.</li>
-	<li>✔ Use .NET identity for users authentication.</li>
-	<li>✔ Handle messages that are not understood or any exceptions raised within the bot.</li>
-	<li>⚠️ Build an installer. <b>=> I used docker-compose to build and run the application, i'm not sure if that counts</b></li>
+	<li> -Have more than one chatroom.</li>
+	<li> -Use .NET identity for users authentication.</li>
+	<li> -Handle messages that are not understood or any exceptions raised within the bot.</li>
 </ul>
 
 This project help me a lot to start working with RabbitMQ which was very helpful because I learned a new technology and increased my skills.
