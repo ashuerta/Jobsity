@@ -1,11 +1,11 @@
-﻿var client = Stomp.client('ws://' + window.location.hostname + ':15672/ws');
+﻿var client = Stomp.client('ws://' + window.location.hostname + ':15674/ws');
 var pattern = /^\/stock\=/i;
 
 $(document).ready(function () {
 
     var headers = {
-        login: 'rabbitmq',
-        passcode: 'rabbitmq',
+        login: 'jobsityrmq',
+        passcode: 'jobsityrmq',
         // additional header
         'client-id': 'myclientid_' + parseInt(Math.random() * 100, 10)
     };
@@ -27,7 +27,7 @@ $(document).ready(function () {
         console.log('error');
     };
 
-    client.connect('rabbitmq', 'rabbitmq', on_connect, on_error, '/', headers);
+    client.connect('jobsityrmq', 'jobsityrmq', on_connect, on_error, '/', headers);
 
     insertChat(userLogged, '', 1);
 
