@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "d1416f31-0a4d-4761-8299-fd5554d86cb2",
+		"name": "JobsityTest",
+		"description": "Testing for Jobsity Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9780382"
+	},
+	"item": [
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"ashuerta@hotmail.com\",\n\t\"password\": \"Developer4334.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5250/v1/Auth/Login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5250",
+					"path": [
+						"v1",
+						"Auth",
+						"Login"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"ashuerta@hotmail.com\",\n\t\"password\": \"Developer4334.\",\n    \"confirmPassword\": \"Developer4334.\",\n    \"firstName\": \"Abraham\",\n    \"lastName\": \"Huerta\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5250/v1/Auth/Register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5250",
+					"path": [
+						"v1",
+						"Auth",
+						"Register"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "SendMsg",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": \"ashuerta@hotmail.com\",\n\t\"msg\": \"This is a test message\",\n\t\"date\": \"2024-07-11 00:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5250/v1/Message/AddMsg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5250",
+					"path": [
+						"v1",
+						"Message",
+						"AddMsg"
+					]
+				},
+				"description": "Login"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllUsers",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc2h1ZXJ0YUBob3RtYWlsLmNvbSIsImp0aSI6IjMxN2IyY2IyLTZiYjYtNDFlZi05NWMxLWUzNzM0YTRjOTc4ZCIsImV4cCI6MTU3MzQ2NzQ1MCwiaXNzIjoiaHR0cDovL2FzaHVlcnRhLmNvbSIsImF1ZCI6Imh0dHA6Ly9hc2h1ZXJ0YS5jb20ifQ.fMHVna7JsdoEnMoE59Ilm6OvGD_876mwyxYrlOTQTt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5250/v1/Message/GetAllMsgs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5250",
+					"path": [
+						"v1",
+						"Message",
+						"GetAllMsgs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StooqSource",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhc2h1ZXJ0YUBob3RtYWlsLmNvbSIsImp0aSI6IjMxN2IyY2IyLTZiYjYtNDFlZi05NWMxLWUzNzM0YTRjOTc4ZCIsImV4cCI6MTU3MzQ2NzQ1MCwiaXNzIjoiaHR0cDovL2FzaHVlcnRhLmNvbSIsImF1ZCI6Imh0dHA6Ly9hc2h1ZXJ0YS5jb20ifQ.fMHVna7JsdoEnMoE59Ilm6OvGD_876mwyxYrlOTQTt4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"user\": \"ashuerta@hotmail.com\",\n\t\"msg\": \"/stock=APPL.US\",\n\t\"date\": \"2024-07-11 00:00:00\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5250/v1/Bot/StooqSource",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5250",
+					"path": [
+						"v1",
+						"Bot",
+						"StooqSource"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
